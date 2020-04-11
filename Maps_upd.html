@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maps</title>
+	<link rel="stylesheet" type="text/css" href="css_maps.css">
+
+    <!-- <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map_canvas { height: 100% }
+        #resp {height: 200px; width: 400px;background-color: aqua;}
+		#menu {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	width: 14em;
+	margin-top: -2.5em;
+	background: #3E3E43;
+	margin-right: 8px;
+	height: 14em;
+	box-shadow: 0px 0px 10px black;
+			padding: 4px;
+			}
+		button{
+			padding: px;
+		}
+		p{
+			padding: -10px;
+		}
+		
+		.itext{
+			margin: 5px 0px 0px 1px;
+		}
+  
+      </style> -->
+
+
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry&key=AIzaSyB03cpu-oNShx1HIoSdbu8_7n-PvbHu6ec" async defer>
+        </script>
+
+        <script src="Maps_updjs.js"></script>
+
+
+
+
+
+
+</head>
+
+
+
+<body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+	<!--<div id='comandos'style="width:20%; height:20%"; color:'blue'></div>-->
+<div id = 'menu'>
+	
+	
+	
+	<button id='limpar' onclick="limpar()">Limpar</button>
+	
+  
+	<input type="button" name="bt" id="p1" value="Enviar P1" onclick='polyinsert()' >
+	<input type="button" id="p2" value="Envia P2" onclick="polyinsert2()">
+  
+	<label id="info">P1
+    <input type="text" id="polytext" class="itext"  value='Polyline Programada'  onclick='text1_c()'>  </label>
+	
+	<p><label id="info">P2
+	<input type="text" id="polytext2" class="itext" value='Polyline Realizada'  onclick="text2_c()"></label></p>
+	<hr>
+    
+  
+  
+  <p>tgioCdgb|Gu{DdvpBkshD|xeA </p>
+	<hr>
+
+	<input type="file" id="inputfile" accept=".txt,.csv" onclick="readarq()">
+	<input type="button" id="bf" onclick="readarq()">
+
+
+
+	</div>
+
+	<!-- <div id="arquivor"></div> -->
+
+
+
+
+</body>
+</html>
